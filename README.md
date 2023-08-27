@@ -1,0 +1,10 @@
+# Clustering
+Clustering is an unsupervised machine learning technique used to group similar data points together based on their feature similarities. It aims to discover inherent patterns and structures in the data without using labeled outcomes. One popular clustering algorithm is KMeans. KMeans divides data into 'k' clusters, where each cluster is represented by a centroid. It minimizes the distance between data points and their respective cluster centroids, forming compact groups.
+
+The elbow curve is a graphical tool used to determine the optimal number of clusters ('k') for KMeans. It involves plotting the sum of squared distances (inertia or within-cluster sum of squares, WCSS) against different values of 'k'. As 'k' increases, WCSS tends to decrease because data points are closer to their centroids. The elbow point on the curve signifies a point of diminishing returns – adding more clusters doesn't significantly reduce WCSS. Selecting 'k' at this point balances clustering complexity and meaningfulness.
+
+Inertia (WCSS) quantifies the compactness of clusters in KMeans. It's calculated by summing squared distances between data points and their cluster centroids. Lower inertia indicates tighter clusters. WCSS is minimized when each point is its own cluster, but that's impractical. KMeans seeks to strike a balance where clusters are meaningful while inertia is reasonably low. Elbow curve analysis helps find this balance, guiding the selection of 'k' by identifying the inflection point where inertia reduction slows, offering insights into clustering structure.
+
+This repository consists of the following projects in clustering:
+
+• ***Clustering_Grain-Variety***: Here we group grain varieties based on features like width, length, asymmetrical coefficients, and else. We use KMeans clustering from sklern.cluster. We further use the elbow curve to identify the appropriate number of clusters. Then we use a cross-tabulation method to see how our clusters align to the original grain varieties.
